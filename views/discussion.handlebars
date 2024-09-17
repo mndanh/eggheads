@@ -1,0 +1,40 @@
+<div id="rightSide" class="row">
+    <div id="movieInfo" class="row col-lg-12 col-md-12">
+        <div id="fromAPI" class="row">
+            <div id="moviePoster" class="col-6">
+                <img class="img-fluid" src="{{movie.Poster}}" alt="{{movie.Title}}" />
+             </div>
+            <div id="movieInfo" class="col-6">
+                <h1>{{movie.Title}}</h1>
+                <p>{{movie.Year}}</p>
+                <p><strong>Director:</strong> {{movie.Director}}</p>
+                <p><strong>Writer:</strong> {{movie.Writer}}</p>
+                <p><strong>Cast:</strong> {{movie.Actors}}</p>
+            </div>
+        </div>
+
+        <div id="discussion-wrapper" class="row">
+            <div class="col-12">
+                <h2>Let's Discuss</h2>
+                <div id="discussion-area-wrapper" class="col-lg-12 col-md-12">
+                    <div id="discussions-area" class="container-fluid gap-3"></div>
+                </div>
+            </div>
+            <div id="comment-section" class="col-lg-12 col-md-12 mt-3"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const currMovieId = "{{movie.imdbID}}";
+    const currDiscussionUser = "{{user}}"
+
+    let currDiscussionId = "{{currTopic.id}}"
+    let currDiscussionText = "{{currTopic.text}}"
+
+    console.log("movie", currMovieId)
+    console.log("user", currDiscussionUser)
+    console.log("currTopic", currDiscussionId)
+    console.log("currDiscussionText", currDiscussionText)
+</script>
+<script type="text/javascript" src="/js/discussion.js"></script>
